@@ -7,9 +7,9 @@ from scipy.stats import norm
 chat_id = 416934694 # Ваш chat ID, не меняйте название переменной
 
 def solution(p: float, x: np.array) -> tuple:
-    n = len(data)
-    mean = np.mean(data)
-    std = np.std(data, ddof=1)
+    n = len(x)
+    mean = np.mean(x)
+    std = np.std(x, ddof=1)
     t = stats.t.ppf((1 + p) / 2, n - 1)
     margin_of_error = t * std / np.sqrt(n)
     lower = mean - margin_of_error
